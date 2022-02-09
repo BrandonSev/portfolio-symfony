@@ -1,7 +1,55 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HomeController!{% endblock %}
+{% block title %}{{ parent() }} - Accueil{% endblock %}
+
+{% set heroInfo = {
+ title: "Je suis <br> <span> Brandon Seveste</span>",
+ description: "Actuellement en formation développeur web et Mobile, je maîtrise le Html / css / Javascript , ainsi que l’utilisation de la librairie React.",
+ linkText: "Voir mes réalisations"
+} %}
 
 {% block body %}
-<h1>Hello from my first view</h1>
+ {% include('/partials/hero.html.twig') with heroInfo %}
+ <section class="skills" id="skills">
+  <div class="container">
+   <h2 class="active">Mes compétences</h2>
+   <div class="skills_wrapper">
+    <div class="skills_frontend">
+     <span class="skills_badge">category title</span>
+     <div
+             class="skills_frontend__language"
+     >
+      <p>Sous Cat title</p>
+      <ul>
+       <li>
+        <img
+                src=""
+                alt=""
+        />
+        techno name
+       </li>
+      </ul>
+     </div>
+    </div>
+    <div class="skills_backend">
+     <span class="skills_badge">category title</span>
+     <div
+             class="skills_backend__language"
+     >
+      <p>Sous Cat title</p>
+      <ul>
+       <li>
+        <img
+                src=""
+                alt=""
+        />
+        techno name
+       </li>
+      </ul>
+     </div>
+    </div>
+   </div>
+  </div>
+ </section>
+
 {% endblock %}

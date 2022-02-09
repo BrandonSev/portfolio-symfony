@@ -1,0 +1,36 @@
+nav {
+  background-color: var(--primary-light);
+  padding: 1rem 0;
+  .navbar {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: fit-content;
+    max-width: fit-content;
+
+    .marker {
+      flex: none;
+      position: absolute;
+      bottom: -16px;
+      height: 4px;
+      background-color: #00C4F0;
+      width: 0;
+      padding: 0;
+      transition: left .4s cubic-bezier(.1, 1, 1, .99);
+    }
+
+    > * {
+      position: relative;
+      padding: 1rem;
+
+      &:nth-child(2){
+        padding: 1rem 1rem 1rem 0;
+      }
+
+      a {
+        padding-bottom: 0.5rem;
+      }
+    }
+  }
+}
