@@ -1,0 +1,126 @@
+.project {
+  padding: 3rem 0;
+  background: var(--primary-light);
+  position: relative;
+
+  .project_wrapper {
+    h2 {
+      font-weight: bold;
+      font-size: 30px;
+    }
+
+    .project_card {
+      margin-top: 3rem;
+      background-color: var(--background);
+      border-radius: 10px;
+      border: 1px solid #3D3D3D;
+      overflow: hidden;
+
+      img {
+        max-height: 300px;
+        width: 100%;
+        aspect-ratio: 16 / 9;
+        object-fit: cover;
+      }
+
+      h3 {
+        font-size: 1.3rem;
+      }
+
+      .slick-list {
+        margin-top: 0;
+      }
+
+      .project_card__header {
+        .slick-slide {
+          padding: 0;
+        }
+
+      }
+
+      p:not(.technology) {
+        color: var(--primary);
+        opacity: .8;
+        padding: 1.5rem 0;
+        font-size: .98rem;
+        max-height: 111px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        flex: 1;
+        line-height: 1.4;
+
+      }
+
+      .project_card__body {
+        height: 262px;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+
+        .technology {
+          color: var(--secondary);
+          padding-bottom: 1rem;
+          font-size: .9rem;
+        }
+
+        .project_card__button {
+          display: flex;
+          justify-content: flex-end;
+          margin-top: 2rem;
+          justify-self: flex-end;
+        }
+      }
+
+    }
+
+    .slick-list {
+      margin-top: 3rem;
+
+      .slick-slide {
+        padding: 0 .5rem;
+      }
+    }
+
+    .slick-dots {
+      bottom: -34px;
+
+      .slick-active {
+        button:before {
+          color: var(--secondary)
+        }
+      }
+
+      button:before {
+        font-size: .8rem;
+        color: var(--primary);
+        opacity: 1;
+      }
+    }
+
+  }
+  .dots {
+    margin-top: 2rem;
+    display: flex;
+    padding: 10px 0;
+    justify-content: center;
+  }
+
+  .dot {
+    border: none;
+    width: 10px;
+    height: 10px;
+    background: var(--primary);
+    border-radius: 50%;
+    margin: 0 5px;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  .dot:focus {
+    outline: none;
+  }
+
+  .dot.active {
+    background: var(--secondary);
+  }
+}
