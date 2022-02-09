@@ -6,11 +6,11 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class RealisationController extends AbstractController
+class ContactController extends AbstractController
 {
-    #[Route('/mes-realisations', name: 'app_realisation')]
+    #[Route('/contact', name: 'app_contact')]
     public function index(): Response
     {
-        return $this->render('realisation/index.html.twig');
+        return $this->render('contact/index.html.twig');
     }
 }
