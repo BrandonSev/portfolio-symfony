@@ -14,40 +14,27 @@
   <div class="container">
    <h2 class="active">Mes compétences</h2>
    <div class="skills_wrapper">
-    <div class="skills_frontend">
-     <span class="skills_badge">category title</span>
-     <div
-             class="skills_frontend__language"
-     >
-      <p>Sous Cat title</p>
-      <ul>
-       <li>
-        <img
-                src=""
-                alt=""
-        />
-        techno name
-       </li>
-      </ul>
+    {% for category in categories %}
+     <div class="skills_frontend">
+      <span class="skills_badge">{{ category.title }}</span>
+      {% for underCategory in category.underCategories %}
+      <div class="skills_frontend__language">
+       <p>{{ underCategory.title }}</p>
+       <ul>
+        {% for technology in underCategory.technologies %}
+        <li>
+         <img
+                 src=""
+                 alt=""
+         />
+         {{ technology.title }}
+        </li>
+        {% endfor %}
+       </ul>
+      </div>
+      {% endfor %}
      </div>
-    </div>
-    <div class="skills_backend">
-     <span class="skills_badge">category title</span>
-     <div
-             class="skills_backend__language"
-     >
-      <p>Sous Cat title</p>
-      <ul>
-       <li>
-        <img
-                src=""
-                alt=""
-        />
-        techno name
-       </li>
-      </ul>
-     </div>
-    </div>
+    {% endfor %}
    </div>
   </div>
  </section>

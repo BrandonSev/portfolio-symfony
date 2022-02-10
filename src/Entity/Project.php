@@ -38,7 +38,7 @@ class Project
     private ?\DateTimeImmutable $created_at;
 
     #[ORM\OneToMany(mappedBy: 'project', targetEntity: Images::class)]
-    private ArrayCollection $images;
+    private Collection $images;
 
     #[Pure] public function __construct()
     {
